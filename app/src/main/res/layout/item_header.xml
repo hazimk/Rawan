@@ -1,0 +1,38 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- TextView for First Name column -->
+    <TextView
+        android:id="@+id/firstNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="First Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- TextView for Last Name column -->
+    <TextView
+        android:id="@+id/lastNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Last Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- TextView for Full Name column -->
+    <TextView
+        android:id="@+id/fullNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Full Name"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

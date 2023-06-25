@@ -14,27 +14,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val firstNames = arrayOf(
+        // Array of first names
+        val firstNameArray = arrayOf(
             "James", "Joseph", "Art", "Len", "Don", "Sima", "Mitsue",
             "Leo", "Sage", "Krish", "Minna", "Abe", "Kyle", "Graciela",
             "Cammi", "Matt", "Mel", "Glady", "Yukee"
         )
 
-        val lastNames = arrayOf(
+        // Array of last names
+        val lastNameArray = arrayOf(
             "Bhatt", "Darakjy", "Veere", "Paprocki", "Foller", "Morasca",
             "Toll", "Dilli", "Wiezer", "Marrier", "Amigo", "Maclead",
             "Caldarera", "Roota", "Albares", "Poquette", "Garufi", "Rim",
             "whobrey"
         )
 
-        val fullNames = Array(firstNames.size) { i ->
-            "${firstNames[i]} ${lastNames[i]}"
+        // Array of full names, combining first and last names
+        val fullNameArray = Array(firstNameArray.size) { i ->
+            arrayOf(firstNameArray[i], lastNameArray[i], "${firstNameArray[i]} ${lastNameArray[i]}")
         }
 
         recyclerView = findViewById(R.id.recyclerView)
-        adapter = NameAdapter(firstNames, lastNames, fullNames)
+        adapter = NameAdapter(fullNameArray)
 
+        // Set the adapter for the RecyclerView
         recyclerView.adapter = adapter
+
+        // Set the layout manager for the RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 }
